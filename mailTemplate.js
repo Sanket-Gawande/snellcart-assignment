@@ -1,0 +1,60 @@
+export default function mailTemplate(email) {
+  return `<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>request confirmation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="width: 100%;">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        body {
+            background-color: #ccc;
+            padding: 2rem 0 1rem;
+        }
+    </style>
+    <section style="max-width:500px ;margin: auto;padding: 1rem 2rem 0rem;background: white;">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg" alt="slack logo"
+            style="width: 90px;object-fit: cover;margin:2rem 0 ;">
+        <h4 style="font-weight: 700;font-size: larger;">Confirm your email address to get started on slack</h4>
+        <p style="padding: .5rem 0;">Once you have confirmed that <span
+                style="color:blue">${email}</span> is your email address, we'll help you find your
+            slack workspace or create a new one.</p>
+        <p><b>📲 From your mobile device, </b> tap the button below to confirm;</p>
+        <button
+            style="font-weight: 600; background: green;padding:.5rem 1rem ; margin: 1rem 0; color:white;border:none;border-radius: .5rem;">
+            Confirm Email Address
+        </button>
+        <p style="padding: .5rem 0 1rem;border-bottom: .4px solid #eee;">if you didn't request this email, there's
+            nothung to worry about - you can safely
+            ignore it. </p>
+        <hr>
+        <div style="max-width: max-content; margin:1rem auto ;text-align: center;">
+
+            <p style="padding: .2rem 0;">Made by slack technologies, inc</p>
+            <p style="padding: .2rem 0;">500 Howard street | san fransisco, CA 94105 | United states</p>
+            <p style="padding: .5rem 0 2rem;color: #333 ;font-size: small;font-weight: 500; ">
+                <a style="color: #333 ;margin: 0 .1rem;" href="#">Our blog</a>
+                <a style="color: #333 ;margin: 0 .1rem;" href="#">Email Preferences</a>
+                <a style="color: #333 ;margin: 0 .1rem;" href="#">Policies</a>
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>`;
+}
